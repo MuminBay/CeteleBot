@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Çetele Takip Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="loginBox" class="auth-box">
+            <h2>Giriş Yap</h2>
+            <form id="loginForm">
+                <div class="login-type">
+                    <label>
+                        <input type="radio" name="loginType" value="user" checked> Kullanıcı
+                    </label>
+                    <label>
+                        <input type="radio" name="loginType" value="admin"> Yönetici
+                    </label>
+                </div>
+                <input type="text" id="loginUsername" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="loginPassword" placeholder="Şifre" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Beni Hatırla</label>
+                </div>
+                <button type="submit">Giriş Yap</button>
+                <p>
+                    <a href="#" id="showForgotPassword">Şifremi Unuttum</a> |
+                    <a href="#" id="showRegister">Kayıt Ol</a>
+                </p>
+            </form>
+        </div>
+
+        <div id="registerBox" class="auth-box hidden">
+            <h2>Kayıt Ol</h2>
+            <form id="registerForm">
+                <div class="login-type">
+                    <label>
+                        <input type="radio" name="registerType" value="user" checked> Kullanıcı
+                    </label>
+                    <label>
+                        <input type="radio" name="registerType" value="admin"> Yönetici
+                    </label>
+                </div>
+                <input type="text" id="registerUsername" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="registerPassword" placeholder="Şifre" required>
+                <input type="password" id="confirmPassword" placeholder="Şifreyi Tekrar Girin" required>
+                <input type="text" id="adminCode" placeholder="Yönetici Kodu" class="hidden">
+                <button type="submit">Kayıt Ol</button>
+                <p>
+                    <a href="#" id="showLogin">Giriş Yap</a>
+                </p>
+            </form>
+        </div>
+
+        <div id="forgotPasswordBox" class="auth-box hidden">
+            <h2>Şifremi Unuttum</h2>
+            <form id="forgotPasswordForm">
+                <input type="text" id="forgotUsername" placeholder="Kullanıcı Adı" required>
+                <input type="password" id="newForgotPassword" placeholder="Yeni Şifre" required>
+                <input type="password" id="confirmForgotPassword" placeholder="Yeni Şifreyi Tekrar Girin" required>
+                <button type="submit">Şifreyi Güncelle</button>
+                <p>
+                    <a href="#" id="backToLogin">Giriş Yap</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+</body>
+</html> 

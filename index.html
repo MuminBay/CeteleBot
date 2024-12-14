@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çetele Takip Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#form" id="formLink">Veri Girişi</a></li>
+                <li><a href="#liste" id="listeLink">Liste</a></li>
+                <li><a href="account.html">Hesabım</a></li>
+            </ul>
+            <div class="user-info">
+                <span id="userDisplay"></span>
+                <button id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="form">
+            <h1>Çetele Takip Sistemi</h1>
+            
+            <div class="veri-girisi">
+                <div class="form-container" id="formContainer">
+                    <div class="form-row">
+                        <input type="text" class="tarih" readonly>
+                        <input type="text" placeholder="Yazı" class="yazi">
+                        <input type="text" placeholder="Cevşen" class="cevsen">
+                        <input type="text" placeholder="Kuran" class="kuran">
+                        <input type="text" placeholder="Mütala" class="mutala">
+                        <input type="text" placeholder="Ezber" class="ezber">
+                        <button class="sil-btn">Sil</button>
+                    </div>
+                </div>
+                
+                <div class="butonlar">
+                    <button id="ekleBtn">+ Yeni Satır Ekle</button>
+                    <button id="listeleBtn">Listele</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="liste" class="gizli">
+            <h2>Kayıtlar</h2>
+            <div id="kayitListesi"></div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

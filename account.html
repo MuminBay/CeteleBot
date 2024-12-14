@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesabım - Çetele Takip Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#form">Veri Girişi</a></li>
+                <li><a href="index.html#liste">Liste</a></li>
+                <li><a href="account.html" class="active">Hesabım</a></li>
+            </ul>
+            <div class="user-info">
+                <span id="userDisplay"></span>
+                <button id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="account">
+            <h1>Hesap Ayarları</h1>
+            
+            <div class="account-section">
+                <div class="update-password-container">
+                    <h2>Şifre Güncelle</h2>
+                    <form id="updatePasswordForm" class="update-form">
+                        <input type="password" id="currentPassword" placeholder="Mevcut Şifre" required>
+                        <input type="password" id="newPassword" placeholder="Yeni Şifre" required>
+                        <input type="password" id="confirmNewPassword" placeholder="Yeni Şifre Tekrar" required>
+                        <button type="submit">Şifreyi Güncelle</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-container">
+                    <h2>İletişim Bilgileri</h2>
+                    <form id="contactForm" class="update-form">
+                        <div class="form-group">
+                            <label for="fullName">Ad Soyad</label>
+                            <input type="text" id="fullName" placeholder="Ad Soyad" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon Numarası</label>
+                            <div class="phone-input">
+                                <span class="prefix">+90</span>
+                                <input type="tel" id="phone" placeholder="5XX XXX XX XX" 
+                                    pattern="[0-9]{10}" maxlength="10" required>
+                            </div>
+                            <small class="hint">Örnek: 5321234567</small>
+                        </div>
+                        <button type="submit">Bilgileri Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/account.js"></script>
+</body>
+</html> 

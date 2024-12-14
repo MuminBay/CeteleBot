@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kullanıcı Kayıtları - Çetele Takip Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html#form">Veri Girişi</a></li>
+                <li><a href="index.html#liste">Liste</a></li>
+                <li><a href="users.html" class="active">Kullanıcılar</a></li>
+            </ul>
+            <div class="user-info">
+                <span id="userDisplay"></span>
+                <button id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="users">
+            <h1>Kullanıcı Kayıtları</h1>
+            
+            <div class="user-section">
+                <div class="user-list-container">
+                    <h2>Kayıtlı Kullanıcılar</h2>
+                    <div id="userList" class="user-list">
+                        <!-- Kullanıcı listesi burada gösterilecek -->
+                    </div>
+                </div>
+
+                <div class="update-password-container">
+                    <h2>Şifre Güncelle</h2>
+                    <form id="updatePasswordForm" class="update-form">
+                        <input type="password" id="currentPassword" placeholder="Mevcut Şifre" required>
+                        <input type="password" id="newPassword" placeholder="Yeni Şifre" required>
+                        <input type="password" id="confirmNewPassword" placeholder="Yeni Şifre Tekrar" required>
+                        <button type="submit">Şifreyi Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/users.js"></script>
+</body>
+</html> 

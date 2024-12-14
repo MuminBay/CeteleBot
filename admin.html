@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetici Paneli - Çetele Takip Sistemi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#users" id="usersLink" class="active">Kullanıcılar</a></li>
+                <li><a href="#settings" id="settingsLink">Ayarlar</a></li>
+            </ul>
+            <div class="user-info">
+                <span id="userDisplay"></span>
+                <button id="logoutBtn">Çıkış Yap</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="users" class="admin-section">
+            <h1>Kullanıcı Listesi</h1>
+            <div id="userList" class="admin-list">
+                <!-- Kullanıcı listesi burada gösterilecek -->
+            </div>
+        </section>
+
+        <section id="userRecords" class="admin-section gizli">
+            <button id="backToUsers" class="back-btn">← Kullanıcı Listesine Dön</button>
+            <div id="recordsList">
+                <!-- Seçili kullanıcının kayıtları burada gösterilecek -->
+            </div>
+        </section>
+
+        <section id="settings" class="admin-section gizli">
+            <h1>Yönetici Ayarları</h1>
+            <div class="settings-container">
+                <div class="update-password-container">
+                    <h2>Şifre Güncelle</h2>
+                    <form id="adminPasswordForm" class="update-form">
+                        <input type="password" id="currentPassword" placeholder="Mevcut Şifre" required>
+                        <input type="password" id="newPassword" placeholder="Yeni Şifre" required>
+                        <input type="password" id="confirmNewPassword" placeholder="Yeni Şifre Tekrar" required>
+                        <button type="submit">Şifreyi Güncelle</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html> 
